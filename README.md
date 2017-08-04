@@ -43,7 +43,7 @@ _Note: height will vary based on width, need to lock in on exact aspect ratio, f
 
 `http://[customer domain]/embed/:registry_id?auto=true|false&loop=true|false`
 
-Ex: http://gamestream.sportradar.com/embed/3fabd3e0-73e5-11e7-af3f-cf2bde4ab38a
+Ex: http://gamestream.sportradar.com/embed/9b84dc60-7936-11e7-b2dd-f550eadcce76
 
 - registry_id: [GameStream Registry API](https://github.com/sportradarus/badlands/wiki/GameStream-Registry-API)
 - loop: determines if the player auto plays the play again after it is done
