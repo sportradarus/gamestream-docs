@@ -22,15 +22,6 @@ Each individual item can be deep linked by including the RegistryId on the URL.
 
 EX: http://gamestream.sportradar.com/9b84dc60-7936-11e7-b2dd-f550eadcce76
 
-### Filters
-We support a number of additional query string parameters to filter the list, just adding them to the URL will filter the experience to plays matching the critertia.
-
-EX: 
-http://gamestream.sportradar.com/?week=7&teamId=4984
-http://gamestream.sportradar.com/?srGameId=8c512845-57fb-4947-84d8-76a637358a84
-
-See Registry API: Filter Options for full supported set of filters.
-
 ## Embed Player
 An embeddable interactive control to display NFL Plays based off NGS Player Tracking data.
 
