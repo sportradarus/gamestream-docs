@@ -54,9 +54,9 @@ Use any combination of filters to limit the lists to registry items matching you
 `GET /registry?filterName=[filtervalue|...]&filterName=[filtervalue|...]`
 
 - week
-- seasonType
+- seasonType (REG, PST)
 - season
-- classification
+- classification (auto filtered by BIG_PLAY, not other classifications at this time) 
 - gsisGameId
 - srGameId
 - teamId (these are sr (Sportradr) teamids)
