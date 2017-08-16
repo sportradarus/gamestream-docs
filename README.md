@@ -61,6 +61,8 @@ Use any combination of filters to limit the lists to registry items matching you
 - srGameId
 - teamId (these are sr (Sportradr) teamids)
 - srPlayId
+- srWeekId
+- srGameId
 
 **EXAMPLES:** (%7C is the encoded |)
 
@@ -269,5 +271,120 @@ https://6h4vl13py3.execute-api.us-west-2.amazonaws.com/prod/registry/ebdc23a0-73
     }
   ]
 }
+```
+
+## Schedule API
+SportRadar provides and API for customers to access schedule information for games available in GameStream
+
+
+### /active-schedule
+Returns an object which includes an array of schedule weeks and a hash of games for each week.
+```
+{
+"weeks": [{
+  "id": "",    // srWeekId, this will be used as the id in games hash (can also be used as a filter in the registry)
+  "type": "",  // season type pre, reg, pst
+  "sKey": 0,   // key that can be used for sorting (helpful when response includes week for multiple season types)
+  "number": 0, // season week number
+  }],
+  games: { //games is hash of games, keyed by srWeekId
+    "srWeekId":[{
+      "id": "", //srGameId (can also be used as a filter in the registry)
+      "home":{
+        "id": "", //team id for the home team
+        "name": "", //home team name
+        "alias": "", //home team alias
+        "game_number": 0 //game number for the home team
+      },
+      "away":{
+        "id": "", //team id for the away team
+        "name": "", //away team name
+        "alias": "", //away team alias
+        "game_number": 0 //game number for the away team
+      }
+    }]
+  }
+}
+```
+
+Example:
+https://ptr2eaarra.execute-api.us-west-2.amazonaws.com/prod/active-schedule
+
+```json
+
+{
+  "weeks": [{
+    "id": "4b642672-a0df-4747-90e9-c25c8e443d15",
+    "type": "pre",
+    "sKey": 0,
+    "number": 0
+  }, {
+    "id": "d6ca5b5b-1dda-4212-9f41-74c4d2357b05",
+    "type": "pre",
+    "sKey": 1,
+    "number": 1
+  }],
+  "games": {
+    "4b642672-a0df-4747-90e9-c25c8e443d15": [{
+      "id": "c18dc388-cb55-4c6b-b247-ef6c14c771f4",
+      "home": {
+        "id": "e627eec7-bbae-4fa4-8e73-8e1d6bc5c060",
+        "name": "Dallas Cowboys",
+        "alias": "DAL",
+        "game_number": 1
+      },
+      "away": {
+        "id": "de760528-1dc0-416a-a978-b510d20692ff",
+        "name": "Arizona Cardinals",
+        "alias": "ARI",
+        "game_number": 1
+      }
+    }],
+    "d6ca5b5b-1dda-4212-9f41-74c4d2357b05": [{
+      "id": "11521ad9-fa31-4dd7-aa0e-6dd855db26f8",
+      "home": {
+        "id": "d5a2eb42-8065-4174-ab79-0a6fa820e35e",
+        "name": "Cleveland Browns",
+        "alias": "CLE",
+        "game_number": 1
+      },
+      "away": {
+        "id": "0d855753-ea21-4953-89f9-0e20aff9eb73",
+        "name": "New Orleans Saints",
+        "alias": "NO",
+        "game_number": 1
+      }
+    }, {
+      "id": "15b4c33c-b4f3-4f34-8e33-4a61f3c306b4",
+      "home": {
+        "id": "7b112545-38e6-483c-a55c-96cf6ee49cb8",
+        "name": "Chicago Bears",
+        "alias": "CHI",
+        "game_number": 1
+      },
+      "away": {
+        "id": "ce92bd47-93d5-4fe9-ada4-0fc681e6caa0",
+        "name": "Denver Broncos",
+        "alias": "DEN",
+        "game_number": 1
+      }
+    }, {
+      "id": "1f244edd-cd81-4160-9fab-4dc8f9326f5a",
+      "home": {
+        "id": "04aa1c9d-66da-489d-b16a-1dee3f2eec4d",
+        "name": "New York Giants",
+        "alias": "NYG",
+        "game_number": 1
+      },
+      "away": {
+        "id": "cb2f9f1f-ac67-424e-9e72-1475cb0ed398",
+        "name": "Pittsburgh Steelers",
+        "alias": "PIT",
+        "game_number": 1
+      }
+    }]
+  }
+}
+
 ```
 
