@@ -278,6 +278,7 @@ SportRadar provides and API for customers to access schedule information for gam
 
 
 ### /active-schedule
+https://ptr2eaarra.execute-api.us-west-2.amazonaws.com/prod/active-schedule
 Returns an object which includes an array of schedule weeks and a hash of games for each week.
 ```
 {
