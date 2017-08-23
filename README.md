@@ -39,6 +39,7 @@ Ex: http://gamestream.sportradar.com/embed/9b84dc60-7936-11e7-b2dd-f550eadcce76
 - registry_id: [GameStream Registry API](https://github.com/sportradarus/badlands/wiki/GameStream-Registry-API)
 - loop: determines if the player auto plays the play again after it is done
 - auto: determines if the player will auto play or not (defaults to auto play)
+- endSlate: default is true (unless loop=true) and can be set to false to remove end slate from showing
 
 ## Registry API
 For deeper integration or customization, SportRadar provides and API for customers to access the items in GameStream or filter the list
