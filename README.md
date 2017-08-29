@@ -1,13 +1,13 @@
 # GameStream Docs
-GameStream is a rich visualization of the game using NFL NextGen data, which is tracking every player using sensors in their shoulder pads.  There is both a fully hosted and white-labled soutions with big plays coming through live (post play), and an embeddable interactive play visualization component.
+GameStream is a rich visualization of the game using NFL NextGen (NGS) data, which tracks every player using sensors in their shoulder pads.  There are both a fully hosted, white-label solution with big plays coming through live (post play), and an embeddable interactive play visualization component.
 
 ## Hosted Solution
-We provide our customers with a full hosted and white-lable solution to offer a unique and engaging destiation for their fans, under the customer's brand.
+We provide a fully hosted, white-label solution under your branding, offering a unique and engaging destination for fans.
 
 http://gamestream.sportradar.com/
 
 Customers can customize the solution by:
-- Url (host name drives the customer setting for gamestream)
+- URL (host name drives the customer setting for GameStream)
 - Logo
 - Header Color
 - Ad Tags
@@ -23,26 +23,26 @@ Each individual item can be deep linked by including the RegistryId on the URL.
 EX: http://gamestream.sportradar.com/9b84dc60-7936-11e7-b2dd-f550eadcce76
 
 ## Embed Player
-An embeddable interactive control to display NFL Plays based off NGS Player Tracking data.
+An embeddable interactive control to display NFL plays based off NGS player tracking data.
 
 ![image](https://user-images.githubusercontent.com/1287502/28947607-a6b74b08-7865-11e7-893c-45e0a557f1b3.png)
 
 - Use an iFrame to embed
-- Set Width and Height 
+- Set Width and Height
 
-_Note: height will vary based on width, need to lock in on exact aspect ratio, for now user must find right size._
+_Note: Height varies based on width, need to lock in exact aspect ratio, for now user must find right size._
 
 `http://[customer domain]/embed/:registry_id?auto=true|false&loop=true|false`
 
 Ex: http://gamestream.sportradar.com/embed/9b84dc60-7936-11e7-b2dd-f550eadcce76
 
 - registry_id: [GameStream Registry API](https://github.com/sportradarus/badlands/wiki/GameStream-Registry-API)
-- loop: determines if the player auto plays the play again after it is done
-- auto: determines if the player will auto play or not (defaults to auto play)
-- endSlate: default is true (unless loop=true) and can be set to false to remove end slate from showing
+- loop: Determines if the player loops the video after it is done
+- auto: Determines if the player auto plays or not (defaults to auto play)
+- endSlate: Default is true (unless loop=true) and can be set to false to remove end slate from showing
 
 ## Registry API
-For deeper integration or customization, SportRadar provides and API for customers to access the items in GameStream or filter the list
+For deeper integration or customization, Sportradar provides an API to access the items in GameStream or filter the list of registry items.
 
 ### /registry
 Returns a list of registry items, with paging and filter capability.
@@ -57,7 +57,7 @@ Use any combination of filters to limit the lists to registry items matching you
 - week
 - seasonType (REG, PST)
 - season
-- classification (auto filtered by BIG_PLAY, not other classifications at this time) 
+- classification (auto filtered by BIG_PLAY, no other classifications at this time)
 - gsisGameId
 - srGameId
 - teamId (these are sr (Sportradr) teamids)
@@ -160,13 +160,13 @@ Use these parameters to page the results.
 
 `/registry?limit=[number]&nextIndex=[from last result]`
 
-- limit: the number of result you want returned with each call
-- nextIndex: from the initial response, there will be a nextIndex used to get the next page
+- limit: The number of results you want returned with each call
+- nextIndex: From the initial response, there will be a nextIndex used to get the next page
 
 ### GET /registry/[registry id]
 Returns a single item by registry id.
 
-Example: 
+Example:
 
 https://6h4vl13py3.execute-api.us-west-2.amazonaws.com/prod/registry/ebdc23a0-73e4-11e7-af3f-cf2bde4ab38a
 
@@ -275,7 +275,7 @@ https://6h4vl13py3.execute-api.us-west-2.amazonaws.com/prod/registry/ebdc23a0-73
 ```
 
 ## Schedule API
-SportRadar provides and API for customers to access schedule information for games available in GameStream
+Sportradar provides an API to access schedule information for games available in GameStream.
 
 
 ### /active-schedule
@@ -389,4 +389,3 @@ https://ptr2eaarra.execute-api.us-west-2.amazonaws.com/prod/active-schedule
 }
 
 ```
-
