@@ -40,6 +40,7 @@ Ex: http://gamestream.sportradar.com/embed/9b84dc60-7936-11e7-b2dd-f550eadcce76
 - loop: Determines if the player loops the video after it is done
 - auto: Determines if the player auto plays or not (defaults to auto play)
 - endSlate: Default is true (unless loop=true) and can be set to false to remove end slate from showing
+- startIndex: Only evaluated when `auto` is set to `true`. Valid values are `first` or `last`. Determines if the thumbnail image for the player is that of the first index or the last.  Defaults to the first.
 
 ## Registry API
 For deeper integration or customization, Sportradar provides an API to access the items in GameStream or filter the list of registry items.
