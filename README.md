@@ -41,7 +41,8 @@ Ex: http://gamestream.sportradar.com/embed/9b84dc60-7936-11e7-b2dd-f550eadcce76
 - auto: Determines if the player auto plays or not (defaults to auto play)
 - frontSlate: Default is false and can be set to true to show front slate
 - endSlate: Default is true (unless loop=true) and can be set to false to remove end slate from showing
-- startIndex: Only evaluated when `auto` is set to `true`. Valid values are `first` or `last`. Determines if the thumbnail image for the player is that of the first index or the last.  Defaults to the first.
+- startIndex: Only evaluated when `auto` is set to `false`. Valid values are `first` or `last`. Determines if the thumbnail image for the player is that of the first index or the last.  Defaults to the first.
+- camera: Determines which camera to use. Available values are 1,2,3 etc and are based on the camera option placement for the particular play.  For example for a rushing play, the available cameras are 1 (coach) or 2 (rush). 
 
 ## Registry API
 For deeper integration or customization, Sportradar provides an API to access the items in GameStream or filter the list of registry items.
